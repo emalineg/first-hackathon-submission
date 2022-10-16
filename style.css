@@ -139,7 +139,7 @@
 	border: 2px solid #FFFFFF;
 	display: flex;
 	align-items: center;
-	transition-duration: 0.3s;
+	/* transition-duration: 0.3s; */
 }
 
 .btn {
