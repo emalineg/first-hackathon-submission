@@ -7,7 +7,6 @@ function playCSGame(){
 const question = document.querySelector('#question');
 const choices = Array.from(document.querySelectorAll('.choice-text'));
 const scoreText = document.querySelector('#score');
-const MorgButtTwo = document.querySelector('#MorgCalcTwo')
 
 let answerSubmitted = false;
 let currentQuestion = {};

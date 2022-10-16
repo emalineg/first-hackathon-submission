@@ -142,6 +142,10 @@
 	/* transition-duration: 0.3s; */
 }
 
+.morgCalcTwo {
+	visibility: hidden;
+}
+
 .morgCalcNotHidden, .btn {
 	color: orangered;
 	border: 2px solid orangered;	
