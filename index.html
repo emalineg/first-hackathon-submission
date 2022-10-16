@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Immigrace</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel='stylesheet' href="style.css">
+		<script src="lang.js"></script>
+		<script src="creditScoreGame.js"></script>
+		<script src="https://d3js.org/d3.v7.min.js"></script>
+		<script src="d3-tip.js"></script>
+	</head>
+	<body>
+		<div class="container">
+			<div class="wrapper">
+				<!-- intro slide -->
+				<div class="slide intro_en" id="intro_en">
+					<div class="layer intro1">
+						<p>Welcome to</p>
+						<h1>Immigrace</h1>
+						<h3>Helping immigrants <span>achieve the American Dream</span></h3>
+						<div class="row">
+							<a href="#" onclick="changeLang('fr')">Parlez-vous français?</a>
+							<a href="#immigrationTrend">Start the Journey &nbsp; <span>&#x27F6;</span></a>
+							<span>Explore this interactive app to prepare to buy a home,<br>
+							determine your readiness to do so, and understand the process.</span>
+						</div>
+					</div>
+				</div>
+				<div class="slide intro_fr" id="intro_fr">
+					<div class="layer intro1">
+						<p>Bienvenue aux</p>
+						<h1>Immigrâce</h1>
+						<h3>Aidant les immigrants <span>achieve the American Dream</span></h3>
+						<div class="row">
+							<a href="#" onclick="changeLang('en')">Speak English?</a>
+							<a href="#immigrationTrend">Commencez le chemin &nbsp; <span>&#x27F6;</span></a>
+							<span>Explore this interactive app to prepare to buy a home,<br>
+							determine your readiness to do so, and understand the process.</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- scope of immigration slide -->
+				<div id="immigrationTrend" class="slide">
+					<div class="col50">
+						<div class="immigrationTrendDesc">
+							<h2 class="title">You're One of Many Who Made It</h2>
+							<p>The United States of America welcomes tens of thousands of people from around the world to visit, live and work in the country. Many are looking to achieve the American dream—</p>
+							<br>
+							<p>The following graph helps visualize  all forms received and processed by the <a href="https://www.uscis.gov/tools/reports-studies/immigration-forms-data?topic_id=23035&field_native_doc_issue_date_value%5Bvalue%5D%5Bmonth%5D=&field_native_doc_issue_date_value_1%5Bvalue%5D%5Byear%5D=2018&combined=&items_per_page=10">USCIS</a> in the 3rd Quarter 2018. You can even view how many applications were approved, denied, or pending and the type of each application.</p>
+							<br>
+							<p>Where do you fall among those who came? What is your why for coming to America? Why do you want to take root here?</p>
+							<br>
+							<p>Once you've answered that, taking the initial step of taking care of your credit score becomes easier and clearer.</p>
+							<br>
+							<a href="#creditScore" class="btn">Learn About Credit Scores</a>	
+						</div>		
+					</div>
+					<div class="col50">
+						<div class="canva"></div>
+					</div>	
+				</div>
+
+
+				<!--  credit score slide -->
+				<div id="creditScore" class="slide">
+					<div id="creditScore_main" class="flex-column flex-center">
+						<div class="row">
+							<div class="col50">						
+								<div class="creditScoreDesc" id="creditScoreDesc" >
+									<h2>Your Credit Score Is Important</h2>
+									<p>Credit scores determine whether you get loans and the rates you pay — and it pays to have a good credit score. The lifetime cost of higher interest rates from bad or mediocre credit can exceed six figures.</p><br><br>
+									<p>Someone with FICO scores in the 620 range would pay $65,000 more on a $200,000 mortgage than someone with FICOs over 760.</p><br><br>
+									<p>Since credit scores have become such an integral part of our financial lives, it pays to keep track of yours and understand how your actions affect the numbers. So do you know what it takes to maintain a good credit score?</p>
+									<br><br>
+
+									<a href="#" class="btn" onclick=playCSGame()>Test Your Knowledge</a>			
+									<a href="#mortgageCalc" class="btn">Learn About Mortgage Loans</a>			
+
+								</div>
+								<div class="creditScoreGame" id="creditScoreGame">
+									<h1 id="question">Do you open a lot of credit cards?</h1>
+									<div class="choice-container" id="creditChoice1A">
+										<p class="choice-prefix">A</p>
+										<p class="choice-text" data-number="1">Yes</p>
+									</div>
+									<div class="choice-container" id="creditChoice1B">
+										<p class="choice-prefix">B</p>
+										<p class="choice-text" data-number="2">No</p>
+									</div>
+								</div>
+
+							</div>
+							<div class="col50">
+								<div class="ficoVisual">
+									<img src="img/02_creditScore.png" />
+								</div>
+								<div class="fico">
+									<div class="title">FICO Score</div>
+									<div class="score" id="score">690</div>
+								</div>
+								
+							</div>
+						</div>
+				</div>
+				</div>
+				<!-- mortgage calculator slide -->
+				<div id="mortgageCalc" class="slide">
+
+					<div class="col50">
+						<div class="mortgageCalcDesc">
+							<h2>Did you know?</h2>
+							<p>An equated monthly installment (EMI) is a set monthly payment provided by a borrower to a creditor on a set day, each month. EMIs apply to both interest and principal each month, and the loan is paid off in full over some years.</p><br><br>
+							<p>Borrowers on EMI programmes are usually only allowed to make one set payment per month. Borrowers profit from an EMI since they know exactly how much money they will have to pay towards their loan each month, making personal financial planning easier. Lenders benefit from the loan interest, as it provides a consistent and predictable stream of income.</p>
+							<br><br>
+							<a href="#totalCost" class="btn">Is that all I have to pay?</a>			
+
+						</div>
+					</div>
+					<div class="col50">
+						<div class="mortgageCalc">
+							<div class="top">
+								<h2>Mortgage Loan Calculator</h2>
+
+								<form action="#">
+									<div class="group">
+										<div class="title">Amount</div>
+										<input type="text" value="200000" class="loan-amount" />
+									</div>
+									<div class="group">
+										<div class="title">Interest Rate</div>
+										<input type="text" value="7.13" class="interest-amount" />
+									</div>
+									<div class="group">
+										<div class="title">Number of Months</div>
+										<input type="text" value="360" class="loan-duration" />
+									</div>
+
+								</form>
+							</div>
+							<div class="result">
+								<div class="left">
+									<div class="loan-emi">
+										<h3>Monthly Payment</h3>
+										<div class="value">123</div>
+									</div>
+									<div class="total-interest">
+										<h3>Total Interest Payable</h3>
+										<div class="value">1234</div>
+									</div>
+									<div class="total-amount">
+										<h3>Total Amount</h3>
+										<div class="value">12345</div>
+									</div>
+
+									<button class="calculate-btn">Calculate</button>
+								</div>
+								<div class="right">
+									<canvas id="chart" height=350 width=350></canvas>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- total cost slide -->
+				<div id="totalCost" class="slide">
+					<div class="col50">
+						<div class="totalCostDesc">
+							<h2>Don't Get Caught Off Guard by Total Cost!</h2>
+							<p>Beyond what you have to pay upfront for downpayment on your house, there's more to consider. On the right side, we break down some of the hidden costs you'll want to factor into your decisionmaking.</p><br><br>
+							<p>Listing Price : $398,000</p><br>
+							<p>Hidden Costs</p>
+							<ul>
+								<li>Fees: $2,155</li>
+								<li>Inspection: $635</li>
+								<li>Insurance: $990</li>
+								<li>Taxes: $2,200</li>
+							</ul>
+							<hr>
+							$5980
+							<br><br>
+							<p>Total Cost: $403,980</p>
+							<br><br>
+							<a href="#predictLoan" class="btn">Will I be approved if I apply for a loan?</a>			
+						</div>
+					</div>
+					<div class="col50">
+						<div class="totalCost">
+							<button class="accordion">Fees</button>
+							<div class="panel">
+								<ul>
+									<li>Attorney Fee: Charged by a real estate attorney to prepare and review home purchase agreements.</li>
+									<li>Closing Fee: Aka "escrow fee." Paid to the party handling the closing.</li>
+									<li>Credit Report Fee: Charged by lender to pull your credit reports from three primary reporting bureaus</li>
+									<li>Property Appraisal Fee: Paid to a professional property appraisal company to access the home's fair market value.</li>
+									<li>Origination Fee: Covers the lender's administrative costs to process your fee.</li>
+									<li>Underwriting Fee: Charged by the lender for underwriting or verifying your loan.</li>
+									<li>Rate Lock Fee: Charged by lender for guaranteeing you a specific interest rate.</li>
+									<li>Recording Fee: Charged by your local recording office for the recording of public land records.</li>
+									<li>Survey Fee: Charged by surveying company to confirm a property's boundaries.</li>
+									<li>Title Search Fee: Charged by the tital company to analyze public property records for any ownership discrepancies.</li>
+								</ul>
+							</div>
+
+							<button class="accordion">Inspection</button>
+							<div class="panel">
+								<ul>
+									<li>Flood Determinationa and Moniitoring Fee: Charged by a certified flood inspector to determine if property is in a flood zone, which requires flood insurance. </li>
+									<li>Lead-Based Paint Inspection: Charged by a certified inspector to determine if the property has hazardous, lead-based paint.</li>
+									<li>Pest Inspection: Covers the cost of professional pest inspection for termites, dry rot, or other pest-related damages. </li>
+								</ul>
+							</div>								
+
+							<button class="accordion">Insurance</button>
+							<div class="panel">
+								<ul>
+									<li>Homeowner's Insurance: A lender requires prepayment of the first year's insurance premium at closing.</li>
+									<li>Lender's Title Insurance: An up-front, one-time fee paid to the title company that protects a lender if an ownership dispute or lien arises that it didn't find in the title search.</li>
+									<li>Owner's Title Insurance: A policy that protects you in the event someone challenges your ownership of the home. This is optional, but highly recommended by legal experts.</li>
+								</ul>								
+							</div>
+
+							<button class="accordion">Taxes</button>
+							<div class="panel">
+								<ul>
+									<li>Property Tax: At closing, expect to pay any property taxes due within 60 days of the home purahse. </li>
+									<li>Tax Monitoring & Tax Status Research Fees: A 3rd party fee to keep tabs on your property tax payments and notify your lender of any issues with your payments.</li>
+									<li>Transfer Tax: A tax levied to transfer the title from the seller to the buyer. </li>
+								</ul>								
+							</div>
+						</div>
+					</div>
+				</div>
+	
+				</div>
+			</div>
+
+			</div>
+		</div>	
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+		<script src="script.js"></script>
+		<script src="totalCost.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
+		<script src="immigration.js"></script>
+	</body>
+</html>

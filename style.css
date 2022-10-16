@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,800;1,900&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+	font-family: 'Poppins', sans-serif;
+}
+
+.slide {
+	height: 100vh;
+	width: 100vw;
+	position: relative;
+}
+
+.wrapper {
+	display: flex;
+	width: 500vw; /* add 100 per slide */
+	transform: rotate(90deg) translateY(-100vh);
+	transform-origin: top left;
+}
+
+.container {
+	height: 100vw;
+	width: 100vh;
+	transform: rotate(-90deg) translateX(-100vh);
+	transform-origin: top left;
+	position: absolute;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	scroll-behavior: smooth;
+}
+
+.layer {
+	margin-left: 20px;
+}
+
+.intro1 h3 span {
+	color: lightsalmon;
+	-webkit-text-stroke-width: .5px;
+	-webkit-text-stroke-color: orangered;
+	text-transform: uppercase;
+}
+
+/* background images */
+/* nb - see .wrapper to add 100 to width per slide */
+
+
+
+.slide:nth-child(1), /* intro */
+
+.slide:nth-child(2) {
+	background: lightblue url("img/Gradient-pig.png") no-repeat fixed center;
+}
+
+.slide:nth-child(3) {
+	background: #191970;
+}
+
+.slide:nth-child(4) { /* credit score */
+	/**** N.B. 2 was taken by div tag for French div container + required specifying absolute position *****/
+	background: whitesmoke;
+}
+
+.slide:nth-child(5) { /* total cost */
+	background: black url("img/Gradient-money.png") no-repeat fixed center;
+}
+
+.slide:nth-child(6) {
+	background: black url("img/Buildings.png") no-repeat fixed center;
+}
+
+.slide:nth-child(7) {
+	background-color: burlywood;
+}
+
+.slide:nth-child(8) {
+	background-color: palevioletred;
+}
+
+
+/* slide-specific */
+
+
+/* slide 1 - intro */
+
+.intro1 {
+	color: #FFFFFF;
+	position: absolute;
+	bottom: 8%;
+}
+
+.intro1 p {
+	font-size: 50px;
+	font-weight: 600;
+}
+
+.intro1 h1 {
+	font-size: 190px;
+	line-height: 155px;
+	margin-left: -10px;
+	/*color: transparent;*/
+	-webkit-text-stroke: 1px #FFFFFF;
+/*	
+	background: url(img/back.png);
+	-webkit-background-clip: text;
+	background-position: 0 0;
+	animation: back 20s linear infinite;
+}
+@keyframes back {
+	100% {
+		background-position: 1800px 0;
+	}
+*/
+
+}
+
+.intro_fr {
+	position: absolute;
+    top: 0;
+    left: 0;
+	visibility: hidden;
+}
+
+.intro1 .row {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top: 30px;
+}
+
+.intro1 .row a,
+.btn {
+	color: #FFFFFF;
+	text-decoration: none;
+	padding: 10px 20px;
+	margin-right: 20px;
+	border: 2px solid #FFFFFF;
+	display: flex;
+	align-items: center;
+	transition-duration: 0.3s;
+}
+
+.btn {
+	color: orangered;
+	border: 2px solid orangered;	
+}
+
+.btn:hover {
+	color: white;
+	border: 2px solid white;
+	background-color: orangered;	
+}
+
+
+.intro1 .row a:hover {
+	color: orangered;
+	background-color: #FFFFFF;
+	border: 2px solid orangered;
+	font-style: italic;
+}
+
+.intro1 .row a span {
+	font-size: 30px;
+	line-height: 15px;
+	margin-left: 5 px;
+}
+
+/* slide 2 - immigration trend */
+
+#immigrationTrend {
+	padding: 72px;
+}
+
+.immigrationTrendDesc {
+	width: 600px;
+	margin: 24px auto;
+	padding: 32px;
+	background: #FFFFFF;
+	border-radius: 8px;
+	color: #15213d;
+}
+
+
+/* slide 3 - credit score */
+
+.col50 {
+	float: left;
+	width: 50%;
+}
+  
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.creditScoreDesc,
+.creditScoreGame {
+	width: 600px;
+	margin: 24px auto;
+	padding: 32px;
+	background: #FFFFFF;
+	border-radius: 8px;
+	color: #15213d;
+}
+
+.creditScoreGame {
+	position: absolute;
+    top: 5vw;
+    left: 5vw;
+	visibility: hidden;
+}
+
+.choice-container {
+	display: flex;
+	margin-bottom: 0.8rem;
+	max-width: 500px;
+	border-radius: 8px;
+	background: lightcoral;
+	font-size: 3rem;
+	/*min-width: 80rem;*/
+}
+
+.choice-container:hover {
+	cursor: pointer;
+	box-shadow: 0 0.3rem 1.5rem 0 rgba(251, 192, 137);
+	transform: scale(1.02);
+	transform: transform 100ms;
+}
+
+.choice-prefix {
+	padding: .5rem .15rem;
+	color: white;
+}
+
+.choice-text {
+	padding: .5rem;
+	width: 100%;
+}
+
+
+.good-choice {
+	background: linear-gradient(32deg, rgb(51,223,36) 0%, rgb(101,232,111) 100%)
+}
+
+.poor-choice {
+	background: linear-gradient(32deg, rgb(230,29,36) 0%, rgb(222,11,11) 100%)
+}
+
+
+/* slide 4 - mortgage calc */
+
+.mortgageCalcDesc {
+	width: 600px;
+	margin: 24px auto;
+	padding: 32px;
+	background: #FFFFFF;
+	border-radius: 8px;
+	color: #15213d;
+}
+
+
+.mortgageCalc {
+	width: 600px;
+	margin: 24px auto;
+	background: #FFFFFF;
+	box-shadow: 0 12px 50px -12px rgb(0, 0 ,0 , 0.2);
+	border-radius: 8px;
+	color: #15213d;
+	overflow: hidden;
+}
+
+.mortgageCalc .top {
+	background: #15213d;
+	color: #FFFFFF;
+	padding: 32px;
+}
+
+.mortgageCalc .top h2 {
+	margin-top: 0px;
+}
+
+.mortgageCalc form {
+	display: flex;
+	gap: 8px;
+	justify-content: space-beween;
+}
+
+.mortgageCalc form input {
+	font-size: 20px;
+	padding: 8px 24px;
+	width: 100%;
+}
+
+.mortgageCalc * {
+	box-sizing: border-box;
+}
+
+.mortgageCalc .title {
+margin-bottom: 16px;
+}
+
+.mortgageCalc .result {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.mortgageCalc .result .left {
+	width: 100%;
+	padding: 8px 32px;
+}
+
+.mortgageCalc .result .left h3 {
+	font-size: 16px;
+	font-weight: 400;
+	margin-bottom: 8px;
+}
+
+.mortgageCalc .result .value {
+	font-size: 30px;
+	font-weight: 900;
+	padding-bottom: 10px;
+	border-bottom: 1px solid rgba(20,33,61, 0.2)
+}
+
+.mortgageCalc .result .value::before {
+	content: "$";
+	font-size: 24px;
+	font-weight: 400;
+	margin-right: 6px;
+	opacity: 0.4;
+}
+
+.mortgageCalc .calculate-btn {
+	background: orangered;
+	color: #FFFFFF;
+	border: none;
+	padding: 8px 32px;
+	border-radius: 8px;
+	font-size: 18;
+	font-weight: 900;
+	cursor: pointer;
+	margin: 24px 0;
+}
+
+
+
+/* slide 5 - total cost */
+
+
+.totalCostDesc {
+	width: 600px;
+	margin: 24px auto;
+	padding: 32px;
+	background: #FFFFFF;
+	border-radius: 8px;
+	color: #15213d;
+}
+
+.totalCost {
+	width: 600px;
+	margin: 24px auto;
+	background: #FFFFFF;
+	box-shadow: 0 12px 50px -12px rgb(0, 0 ,0 , 0.2);
+	border-radius: 8px;
+	color: #15213d;
+	overflow: hidden;
+}
+
+.accordion {
+	background-color: #eee;
+	color: #444;
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	text-align: left;
+	border: none;
+	outline: none;
+	transition: 0.3s;
+}
+  
+.active, .accordion:hover {
+	background-color: #ccc;
+}
+  
+.panel {
+	padding: 0 18px;
+	background-color: white;
+	display: none;
+	overflow: hidden;
+}
+
+/* slide 6 - loan predict  */
+/* slide 7 - next steps */
