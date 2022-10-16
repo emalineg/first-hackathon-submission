@@ -142,11 +142,13 @@
 	/* transition-duration: 0.3s; */
 }
 
-.morgCalcTwo {
+.morgCalcNotHidden {
 	visibility: hidden;
+	color: orangered;
+	border: 2px solid orangered;	
 }
 
-.morgCalcNotHidden, .btn {
+.btn {
 	color: orangered;
 	border: 2px solid orangered;	
 }
