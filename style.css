@@ -210,7 +210,7 @@
 	color: #15213d;
 }
 
-.creditScoreGame {
+.creditScoreGame, .morgCalcNotHidden {
 	position: absolute;
     top: 5vw;
     left: 5vw;
