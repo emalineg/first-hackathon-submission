@@ -201,7 +201,7 @@
 }
 
 .creditScoreDesc,
-.creditScoreGame {
+.creditScoreGame, .morgCalcNotHidden {
 	width: 600px;
 	margin: 24px auto;
 	padding: 32px;
