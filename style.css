@@ -200,6 +200,13 @@
 	visibility: hidden;
 }
 
+.creditScoreGame {
+	position: absolute;
+    top: 5vw;
+    left: 5vw;
+	visibility: hidden;
+}
+
 .creditScoreDesc,
 .creditScoreGame {
 	width: 600px;
@@ -210,12 +217,6 @@
 	color: #15213d;
 }
 
-.creditScoreGame {
-	position: absolute;
-    top: 5vw;
-    left: 5vw;
-	visibility: hidden;
-}
 
 .choice-container {
 	display: flex;

@@ -1,9 +1,11 @@
 let morgButtTwo = document.querySelector(".morgButtTwo");
+let creditScoreDesc = document.getElementById("creditScoreDesc");
+let creditScoreGame = document.getElementById("creditScoreGame");
 
 function playCSGame(){
-    document.getElementById("creditScoreGame").style.visibility = "visible";
+    creditScoreGame.style.visibility = "visible";
     morgButtTwo.style.visibility = "visible";
-    document.getElementById("creditScoreDesc").style.visibility = "hidden";
+    creditScoreDesc.style.visibility = "hidden";
 }
 
 const question = document.querySelector('#question');
