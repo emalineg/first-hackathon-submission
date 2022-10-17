@@ -142,13 +142,7 @@
 	/* transition-duration: 0.3s; */
 }
 
-.morgCalcNotHidden {
-	visibility: hidden;
-	color: orangered;
-	border: 2px solid orangered;	
-}
-
-.btn {
+.morgCalcNotHidden, .btn {
 	color: orangered;
 	border: 2px solid orangered;	
 }
@@ -202,6 +196,9 @@
 	clear: both;
 }
 
+.morgCalcNotHidden {
+	visibility: hidden;
+}
 .creditScoreDesc,
 .creditScoreGame {
 	width: 600px;
