@@ -1,6 +1,6 @@
 function playCSGame(){
     document.getElementById("creditScoreGame").style.visibility = "visible";
-    document.getElementById("#morgCalcNotHidden").style.visibility = "visible";
+    document.getElementById("morgCalcNotHidden").style.visibility = "visible";
     document.getElementById("creditScoreDesc").style.visibility = "hidden";
 }
 
